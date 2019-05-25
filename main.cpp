@@ -60,7 +60,7 @@ bool calcSpriteXOR(U8 x, U8 y, U8 *sprite , int height)
 int main(int argc, char *argv[] )
 {
 
-    initwindow(640 + 2 * SCREEN_OFFSET + SCREEN_DEBUG_WIDTH,  320 + 2 * SCREEN_OFFSET, "First Sample");
+    initwindow(640 + 2 * SCREEN_OFFSET + SCREEN_DEBUG_WIDTH,  320 + 2 * SCREEN_OFFSET, "chip8_emulator",40,40);
     
     rectangle(SCREEN_OFFSET,SCREEN_OFFSET,640 + SCREEN_OFFSET, 320 + SCREEN_OFFSET);
     /*
@@ -81,7 +81,7 @@ int main(int argc, char *argv[] )
     */
       
     CHIP8CPU chip8_cpu;
-    chip8_cpu.readROM("pong.rom");
+    chip8_cpu.readROM("Trip8.rom");
     chip8_cpu.initialze();    
     chip8_cpu.run();
     
